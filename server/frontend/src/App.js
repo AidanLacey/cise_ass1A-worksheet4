@@ -2,14 +2,12 @@ import React from "react";
 import {
   Route,
   NavLink,
-  BrowserRouter as Router,
-  Navigate
+  BrowserRouter as Router
 } from "react-router-dom";
 import Home from "./pages/Home";
 import SEPractice from "./pages/SE-Practice";
 import SubmitArticle from "./pages/Submit-Article"; 
 import NotFoundPage from "./pages/404";
-
 const App = () =>  {
     return (
         <Router>
@@ -22,14 +20,12 @@ const App = () =>  {
             </ul>
           <div className="content">
             <Route exact path="/" component={Home}/>
-            <Route  path="./SEPractice" component={SEPractice}/>
-            <Route  path="./SubmitArticle" component={SubmitArticle}/>
-            <Route exact path="./404" component={NotFoundPage}/>
-            <Navigate to="/404" />
+            <Route  path="/SEPractice" component={SEPractice}/>
+            <Route  path="/SubmitArticle" component={SubmitArticle}/>
           </div>
         </div>
         </Router>
     );
 }
-
+ 
 export default App;
